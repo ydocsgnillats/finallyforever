@@ -1,18 +1,43 @@
 .App {
   text-align: center;
+  background-color: #F4C2C2;
 }
 
 body {
   font-family: 'Waterfall', cursive;
 }
 
-.App-header {
+.Container {
   background-color: #F4C2C2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 6rem;
+  font-size: 6.5rem;
   color: white;
+}
+
+.scrollTop {
+  float: right;
+  border: 1px white solid;
+  bottom: 0;
+  right: 0;
+  font-size: 0.5rem;
+  position: fixed;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: #F4C2C2;
+  margin: 1.5rem;
+  border: none;
+  border-bottom: 1px white solid;
+  border-bottom-width: thin;
+  padding: 0.5rem;
+}
+
+.Navbar {
+  margin-top: -130px;
 }
