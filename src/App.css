@@ -1,3 +1,7 @@
+/* * {
+  border: 1px solid black;
+} */
+
 .App {
   text-align: center;
   background-color: #F4C2C2;
@@ -7,15 +11,39 @@ body {
   font-family: 'Waterfall', cursive;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  height: 12vh;
+  align-items: center;
+}
+
 .Container {
   background-color: #F4C2C2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: 6.5rem;
   color: white;
+}
+
+/* .Home {
+} */
+
+p {
+  margin: 0;
+}
+
+.content {
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-top: 5rem;
+  width: 60%;
+  height: 50vh;
 }
 
 .scrollTop {
@@ -25,19 +53,29 @@ body {
   right: 0;
   font-size: 0.5rem;
   position: fixed;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 button {
   cursor: pointer;
   color: white;
   background-color: #F4C2C2;
-  margin: 1.5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
   border: none;
   border-bottom: 1px white solid;
   border-bottom-width: thin;
-  padding: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 7.5vh;
 }
 
 .Navbar {
-  margin-top: -130px;
+  height: 3rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
 }

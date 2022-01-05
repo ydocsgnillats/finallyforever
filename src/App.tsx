@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <button className="scrollTop" onClick={handleHome}>Scroll To Top</button>
-      <div ref={homeRef} className="Container">
+      <div ref={homeRef} className="Container Home">
         <div className="Navbar">
           <button onClick={handleOffering}>Offerings</button>
           <button onClick={handleBook}>Book Us</button>
@@ -30,6 +30,19 @@ function App() {
             It's Finally Forever...
           </p>
         </header>
+        <div className="content">
+          <p>
+            Finally Forever helps you bring the romance, excitement, and success of your special occasion to a new level. Are you planning to create an ambiance for yourself and your special someone? Or maybe you’re making sure a special moment goes perfect for your loved one… We are here to breathe life into your ideas!
+
+            We are the only luxury service located in Atlanta which lets you design a unique experience based on your vision for your special moment!
+            Create your own luxury experience or select from our thoughtfully designed packages.
+
+            With Finally Forever it’s easy to SAY YES to celebrating your special occasion in style.
+
+            From Yes to I DO, We’re here for you!
+
+          </p>
+        </div>
       </div>
       <div ref={offeringRef} className="Container">
         <p>
