@@ -26,7 +26,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 6.5rem;
+  font-size: 115px;
   color: white;
 }
 
@@ -38,10 +38,10 @@ p {
 }
 
 .content {
-  font-size: 1.75rem;
+  font-size: 40px;
   font-weight: 500;
   letter-spacing: 0.1rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
   width: 60%;
   height: 50vh;
 }
@@ -51,13 +51,18 @@ p {
   border: 1px white solid;
   bottom: 0;
   right: 0;
-  font-size: 0.5rem;
+  font-size: 12px;
   position: fixed;
   padding: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
+.scrollTop:hover {
+  font-size: 12.5px;
+}
+
 button {
+  font-size: 18px;
   cursor: pointer;
   color: white;
   background-color: #F4C2C2;
@@ -69,6 +74,12 @@ button {
   letter-spacing: 2px;
   font-weight: bold;
   height: 7.5vh;
+}
+
+button:hover {
+  opacity: 0.5;
+  font-size: 18.5px;
+  border: 1px white solid;
 }
 
 .Navbar {
