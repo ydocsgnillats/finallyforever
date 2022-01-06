@@ -9,6 +9,8 @@
 
 body {
   font-family: 'Waterfall', cursive;
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 body::-webkit-scrollbar {
@@ -57,10 +59,6 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.scrollTop:hover {
-  font-size: 12.5px;
-}
-
 button {
   font-size: 18px;
   cursor: pointer;
@@ -78,8 +76,6 @@ button {
 
 button:hover {
   opacity: 0.5;
-  font-size: 18.5px;
-  border: 1px white solid;
 }
 
 .Navbar {
@@ -89,4 +85,28 @@ button:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 25px;
+}
+
+@media (max-width: 500px) {
+  .Container {
+    font-size: 75px;
+  }
+
+  button {
+    font-size: 12px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .scrollTop {
+    font-size: 10px;
+    padding: 0.2px;
+    width: 10%;
+  }
+
+  .content {
+    font-size: 25px;
+    width: 80%;
+    font-weight: 800;
+  }
 }
