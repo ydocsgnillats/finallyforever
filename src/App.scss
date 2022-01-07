@@ -18,8 +18,9 @@ body::-webkit-scrollbar {
 }
 
 header {
-  height: 12vh;
-  align-items: center;
+  height: 4vh;
+  margin-top: -3vh;
+  margin-bottom: 5vh;
 }
 
 .Container {
@@ -30,6 +31,34 @@ header {
   align-items: center;
   font-size: 115px;
   color: white;
+}
+
+.Card {
+  font-size: 25px;
+  width: 20%;
+  display: inline-flex;
+  flex-direction: column;
+  height: 55vh;
+  margin: 15px;
+  margin-top: 10vh;
+  pointer-events: none;
+  border: 1px white solid;
+  border-radius: 10px;
+
+  &-title {
+    margin-top: -1vh;
+    padding: 2vh;
+    font-size: 40px;
+    height: 5vh;
+  }
+
+  &-img {
+    height: 40%;
+  }
+
+  &-text {
+    padding: 5px;
+  }
 }
 
 /* .Home {
@@ -43,7 +72,7 @@ p {
   font-size: 40px;
   font-weight: 500;
   letter-spacing: 0.1rem;
-  margin-top: 3rem;
+  margin-top: 15vh;
   width: 60%;
   height: 50vh;
 }
