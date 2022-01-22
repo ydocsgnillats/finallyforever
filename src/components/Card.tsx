@@ -5,14 +5,15 @@ import testrose from '../assets/testrose.jpeg';
 interface cardProps {
     title: string;
     text: string;
-    extras: string;
+    extras: string[];
     price?: string;
+    click: () => void;
 }
 
 export default function Card(props: cardProps) {
 
     return (
-        <div className="card">
+        <div className="card" onClick={() => props.click()}>
             <h3 className="card-title">{props.title}</h3>
             <img className="card-img" src={testrose} />
             {/* <p className="card-extras">{props.extras}</p> */}

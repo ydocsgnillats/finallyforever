@@ -99,10 +99,13 @@ header {
   }
 
   &-title {
-    margin-top: -1vh;
-    height: 0.5vh;
+    margin-top: -0.25vh;
+    height: 3vh;
     font-size: 40px;
     font-family: $cursive;
+    line-height: 4vh;
+    justify-content: center;
+    align-items: center;
   }
 
   &-img { 
@@ -144,13 +147,74 @@ header {
   }
 }
 
+.page {
+  margin-top: 5vh;
+  &-title {
+    margin-top: -7.5vh;
+    font-size: 100px;
+  }
+  &-text {
+    font-size: 20px;
+    font-family: $plain;
+    width: 50%;
+    margin-left: 35%;
+  }
+  &-img {
+    margin-top: -10vh;
+    margin-left: 5vh;
+    width: 30%;
+    height: 30%;
+    display: inline-flex;
+    float: left;
+    pointer-events: none;
+  }
+  &-extras {
+    font-size: 15px;
+    font-family: $plain;
+    height: 15vh;
+    margin-left: 38%;
+    margin-top: 3%;
+    width: 40%;
+    text-align: justify;
+  }
+}
+
 .bottom {
   border: 1px $text1 solid;
   border-radius: 10px;
   width: 87%;
-  display: inline-flex;
+  display: inline-block;
+  height: 25vh;
+  margin-top: 4vh;
+  cursor: pointer;
+
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+  &:hover {
+    background-color: $text1;
+    opacity: 0.5;
+    border: 1px $text2 solid;
+    color: $text2;
+
+    .bottom-text {
+      display: none;
+    }
+    .bottom-text-2 {
+      display: inherit;
+    }
+    .bottom-title {
+      margin-bottom: -3vh;
+    }
+
+  }
   &-title {
-    font-size: 30px;
+    margin-top: -0.5vh;
+    margin-bottom: -1.5vh;
+    width: 100%;
+    font-size: 40px;
     padding: 5px;
   }
 
@@ -158,6 +222,11 @@ header {
     font-size: 20px;
     font-family: $plain;
     padding: 35px;
+  }
+  &-text-2 {
+    font-size: 40px;
+    font-family: $plain;
+    display: none;
   }
 }
 
@@ -205,6 +274,13 @@ button:hover {
   opacity: 0.5;
 }
 
+.back {
+  top: 0;
+  left: 0;
+  margin-top: 3vh;
+  position: fixed;
+}
+
 .navbar {
   height: 3rem;
   width: 100%;
@@ -238,4 +314,8 @@ button:hover {
     width: 80%;
     font-weight: 800;
   }
+}
+
+.hidden {
+  display: none;
 }
