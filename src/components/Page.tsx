@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.scss';
 import testrose from '../assets/testrose.jpeg';
+import { MdArrowBack } from 'react-icons/md';
 
 interface pageProps {
     title: string;
@@ -15,7 +16,10 @@ export default function Page(props: pageProps) {
     return (
         <div className="page">
             <h3 className="page-title">{props.title}</h3>
-            <button className="back" onClick={() => props.back()}>Back</button>
+            <button className="back" onClick={() => props.back()}>
+                <MdArrowBack className="back-icon" />
+                <span className="back-text">Back</span>
+            </button>
             <img className="page-img" src={testrose} />
             <p className="page-text">{props.text}</p>
             <p className="page-extras">

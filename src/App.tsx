@@ -1,10 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './App.scss';
 import Card from './components/Card';
+import Cart from './components/Cart';
 import Page from './components/Page';
 import BottomInfo from './components/BottomInfo';
 import Form from './components/Form';
 import { cardOneContent, cardTwoContent, cardThreeContent, cardFourContent, cardFiveContent } from './content/cardContent';
+import { MdShoppingCart, MdArrowUpward, MdOutlineClose } from 'react-icons/md';
 
 function App() {
 
@@ -16,6 +18,7 @@ function App() {
 
   const [showCards, setShowCards] = useState(true);
   const [showPage, setShowPage] = useState(0);
+  const [cartOpen, setCartOpen] = useState(false);
 
   const handleHome = () => homeRef?.current?.scrollIntoView({ behavior: "smooth" });
   const handleOffering = () => offeringRef?.current?.scrollIntoView({ behavior: "smooth" });
@@ -33,10 +36,17 @@ function App() {
     setShowCards(true);
   }
 
+  const openCart = () => {
+    setCartOpen(!cartOpen);
+  }
+
   useEffect(() => {
     const close = (e: any) => {
       if (e.keyCode === 27) {
         goBack();
+        if (cartOpen) {
+          setCartOpen(false);
+        }
       }
     }
     window.addEventListener('keydown', close)
@@ -65,7 +75,18 @@ function App() {
 
   return (
     <div className="app">
-      <button className="scrollTop" onClick={handleHome}>Scroll To Top</button>
+      <Cart open={cartOpen} close={() => cartOpen} />
+      <button className="scrollTop" onClick={handleHome}>
+        <MdArrowUpward className="scrollTop-icon" />
+        <span className="scrollTop-text">Scroll to Top</span>
+      </button>
+      <button className="cart" onClick={openCart}>
+        {cartOpen ?
+          (<MdOutlineClose className="cart-icon" />) :
+          (<MdShoppingCart className="cart-icon" />)
+        }
+        <span className="cart-text">{cartOpen ? "Exit" : "Cart"}</span>
+      </button>
       <div ref={homeRef} className="container Home">
         <div className="navbar">
           <button onClick={handleOffering}>Offerings</button>
@@ -74,9 +95,7 @@ function App() {
           <button onClick={handleAbout}>About Us</button>
         </div>
         <header>
-          <p>
-            It's Finally Forever...
-          </p>
+          It's Finally Forever...
         </header>
         <p className="subtitle">
           and it's time to <span className="bold">celebrate!</span>
@@ -94,10 +113,8 @@ function App() {
         </div>
       </div>
       <div ref={offeringRef} className="container offerings">
-        <header>
-          <p className={showCards ? "" : "hidden"} >
-            Offerings
-          </p>
+        <header className={showCards ? "offering" : "hidden"} >
+          Offerings
         </header>
         {showCards && <div>
           <Card
@@ -127,23 +144,19 @@ function App() {
       </div>
       <div ref={bookRef} className="container book">
         <header>
-          <p>
-            Book Us
-          </p>
+          Book Us
         </header>
         <Form />
       </div>
       <div ref={testimonialRef} className="container testimonial">
         <header>
-          <p>
-            Testimonials
-          </p>
+          Testimonials
         </header>
       </div>
       <div ref={aboutRef} className="container about">
-        <p>
+        <header>
           About Us
-        </p>
+        </header>
       </div>
     </div>
   );
