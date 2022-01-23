@@ -43,10 +43,8 @@ function App() {
   useEffect(() => {
     const close = (e: any) => {
       if (e.keyCode === 27) {
+        setCartOpen(false);
         goBack();
-        if (cartOpen) {
-          setCartOpen(false);
-        }
       }
     }
     window.addEventListener('keydown', close)
